@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caffeine Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Caffeine Intake Tracker</h1>
+
+    <section class="controls">
+      <div class="buttons">
+        <button id="espresso" data-mg="60">Espresso (60mg)</button>
+        <button id="americano" data-mg="150">Americano (150mg)</button>
+        <button id="cappuccino" data-mg="80">Cappuccino (80mg)</button>
+      </div>
+      <button id="reset" class="reset">RESET</button>
+    </section>
+
+    <section class="status">
+      <div class="totals">
+        <div>Total consumed: <span id="total">0</span> mg</div>
+        <div>Recommended daily limit: <strong>400 mg</strong></div>
+      </div>
+
+      <div class="progress-wrap" aria-hidden="false">
+        <div id="progress" class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="400" aria-valuenow="0"></div>
+      </div>
+
+      <div id="message" class="message">You're good to go.</div>
+    </section>
+
+    <footer class="hint">This is a simple tracker for educational purposes. Values: Espresso 60mg, Americano 150mg, Cappuccino 80mg.</footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
